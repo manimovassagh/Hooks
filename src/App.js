@@ -1,10 +1,26 @@
+/* eslint-disable import/no-anonymous-default-export */
 import React from "react";
+import Accordion from "./components/Accordion";
 
-class App extends React.Component {
-  state = {};
-  render() {
-    return <h1>Hi mani</h1>;
-  }
-}
+const items = [
+  {
+    title: "What is a Framework",
+    content: "a Framework is something that make your life easier",
+  },
+  {
+    title: "why use a framework",
+    content: "because it is more secure and usable",
+  },
+  {
+    title: "what is the most favorite framoework?",
+    content: "the best is React Js",
+  },
+];
 
-export default App;
+export default () => {
+  return (
+    <div>
+      <Accordion items={items} />
+    </div>
+  );
+};
