@@ -2,6 +2,8 @@
 import React from "react";
 import Accordion from "./components/Accordion";
 
+
+
 const items = [
   {
     title: "What is a Framework",
@@ -12,16 +14,16 @@ const items = [
     content: "because it is more secure and usable",
   },
   {
-    title: "what is the most favorite framoework?",
+    title: "what is the most favorite framework?",
     content: "the best is React Js",
   },
 ];
 
-
 export default () => {
   return (
     <div>
-      <Accordion  items={items}   />
+      <Accordion items={items} />
+      
     </div>
   );
 };
