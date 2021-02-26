@@ -1,8 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
 import React from "react";
 import Accordion from "./components/Accordion";
-
-
+import Search from './components/Search';
 
 const items = [
   {
@@ -18,12 +17,12 @@ const items = [
     content: "the best is React Js",
   },
 ];
-
+//test git
 export default () => {
   return (
     <div>
       <Accordion items={items} />
-      
+      <Search />
     </div>
   );
 };
