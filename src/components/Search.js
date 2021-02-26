@@ -50,5 +50,5 @@ const Search = () => {
     </div>
   );
 };
-//debug
+
 export default Search;
