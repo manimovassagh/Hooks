@@ -1,9 +1,17 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { renderIntoDocument } from "react-dom/test-utils";
 
 const Search = () => {
   const [term, setTerm] = useState("React Framework");
   const [results, setResults] = useState([]);
+
+// useEffect(()=>{
+//   console.log('initial render or term was change');
+//   return ()=>{
+//     console.log('Clean up');
+//   };
+// },[term]);
 
   useEffect(() => {
     const search = async () => {
@@ -19,10 +27,18 @@ const Search = () => {
 
       setResults(data.query.search);
     };
-    if (term) {
-      search();
+
+    const timeoutId = setTimeout(function () {
+      if (term) {
+        search();
+      }
+    }, 500);
+
+    return()=>{
+      clearTimeout(timeoutId);
     }
   }, [term]);
+ 
 
   const renderedResults = results.map((result) => {
     return (
