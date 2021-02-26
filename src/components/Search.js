@@ -6,12 +6,12 @@ const Search = () => {
   const [term, setTerm] = useState("React Framework");
   const [results, setResults] = useState([]);
 
-// useEffect(()=>{
-//   console.log('initial render or term was change');
-//   return ()=>{
-//     console.log('Clean up');
-//   };
-// },[term]);
+  // useEffect(()=>{
+  //   console.log('initial render or term was change');
+  //   return ()=>{
+  //     console.log('Clean up');
+  //   };
+  // },[term]);
 
   useEffect(() => {
     const search = async () => {
@@ -34,11 +34,10 @@ const Search = () => {
       }
     }, 500);
 
-    return()=>{
+    return () => {
       clearTimeout(timeoutId);
-    }
+    };
   }, [term]);
- 
 
   const renderedResults = results.map((result) => {
     return (
@@ -48,7 +47,7 @@ const Search = () => {
             className="ui vk button"
             href={`https://en.wikipedia.org?curid=${result.pageid}`}
           >
-            <i class="vk icon"></i>
+            <i className="vk icon"></i>
             Go
           </a>
         </div>
