@@ -29,9 +29,10 @@ const Search = () => {
       <div key={result.pageid} className="item">
         <div className="right floated content">
           <a
-            className="ui button"
+            className="ui vk button"
             href={`https://en.wikipedia.org?curid=${result.pageid}`}
           >
+            <i class="vk icon"></i>
             Go
           </a>
         </div>
