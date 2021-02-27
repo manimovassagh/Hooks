@@ -1,5 +1,6 @@
 /* eslint-disable import/no-anonymous-default-export */
 import React from "react";
+import {useState} from 'react';
 import Accordion from "./components/Accordion";
 import Search from "./components/Search";
 import Dropdown from "./components/Dropdown";
@@ -34,10 +35,14 @@ const options = [
 ];
 
 export default () => {
+
+  const [selected,setSelected]=useState(options[0]);
   return (
     <div>
-      <Search />
-      <Dropdown options={options} />
+      {/* <Search /> */}
+      <Dropdown selected={selected} 
+      onSelectedChange={setSelected}
+      options={options} />
     </div>
   );
 };
