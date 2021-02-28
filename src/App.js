@@ -31,7 +31,15 @@ const options = [
   {
     label: "The Blue color",
     value: "blue",
-  },
+      },
+      {
+        label:"The Pink color",
+        value:"pink"
+      },
+      {
+        label:"The olive color",
+        value:"olive"
+      }
 ];
 
 export default () => {

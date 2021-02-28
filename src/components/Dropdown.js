@@ -50,7 +50,7 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
            
           </div>
         </div>
-        <h4 >
+        <h4 className={`ui ${selected.value} text`}>
           You selected {selected.value}
         </h4>
       </div>
