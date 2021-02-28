@@ -3,8 +3,10 @@ import React, { useState, useEffect } from "react";
 const Dropdown = ({ options, selected, onSelectedChange }) => {
   const [open, SetOpen] = useState(false);
   useEffect(() => {
-    document.body.addEventListener('click',()=>console.log('you have clicked me'));
-  }, []);
+    document.body.addEventListener('click',()=>{
+      SetOpen(true);
+    });
+  },[] );
 
   const colorList = options.map((option, index) => {
     if (option.value === selected.value) {
