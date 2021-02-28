@@ -31,32 +31,37 @@ const options = [
   {
     label: "The Blue color",
     value: "blue",
-      },
-      {
-        label:"The Pink color",
-        value:"pink"
-      },
-      {
-        label:"The olive color",
-        value:"olive"
-      }
+  },
+  {
+    label: "The Pink color",
+    value: "pink",
+  },
+  {
+    label: "The olive color",
+    value: "olive",
+  },
 ];
 
 export default () => {
   const [selected, setSelected] = useState(options[0]);
-  const [showDropDown,setShowDropDown]=useState(true);
- 
+  const [showDropDown, setShowDropDown] = useState(true);
+
   return (
     <div>
-      <button   className="ui vk button" onClick={()=> setShowDropDown(!showDropDown) }>toggle Dropdown</button>
-      
-           {showDropDown ?
-            <Dropdown
-           
-        selected={selected}
-        onSelectedChange={setSelected}
-        options={options}
-      />:null}
+      <button
+        className="ui vk button"
+        onClick={() => setShowDropDown(!showDropDown)}
+      >
+        toggle Dropdown
+      </button>
+
+      {showDropDown ? (
+        <Dropdown
+          selected={selected}
+          onSelectedChange={setSelected}
+          options={options}
+        />
+      ) : null}
     </div>
   );
 };

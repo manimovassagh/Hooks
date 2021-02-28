@@ -25,7 +25,6 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
         onClick={() => onSelectedChange(option)}
       >
         {option.label}
-        
       </div>
     );
   });
@@ -47,7 +46,6 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
           <div className="text">{selected.label} </div>
           <div className={`menu ${open ? "visible transition" : ""}`}>
             {colorList}
-           
           </div>
         </div>
         <h4 className={`ui ${selected.value} text`}>
