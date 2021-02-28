@@ -1,13 +1,12 @@
 import React from "react";
 
-
 const Dropdown = ({ options, selected, onSelectedChange }) => {
   const colorList = options.map((option, index) => {
     return (
-      <div 
-      key={option.value} 
-      className="item"
-      onClick={()=>onSelectedChange(option)}
+      <div
+        key={option.value}
+        className="item"
+        onClick={() => onSelectedChange(option)}
       >
         {option.label}
       </div>
