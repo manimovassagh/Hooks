@@ -48,9 +48,7 @@ const Dropdown = ({ label,options, selected, onSelectedChange }) => {
             {colorList}
           </div>
         </div>
-        <h4 className={`ui ${selected.value} text`}>
-          You selected {selected.value}
-        </h4>
+       
       </div>
     </div>
   );
