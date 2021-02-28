@@ -2,8 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 
 const Dropdown = ({ options, selected, onSelectedChange }) => {
   const [open, SetOpen] = useState(false);
-  
-
 
   const ref = useRef();
   useEffect(() => {
@@ -27,6 +25,7 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
         onClick={() => onSelectedChange(option)}
       >
         {option.label}
+        
       </div>
     );
   });
@@ -40,14 +39,20 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
           onClick={() => {
             SetOpen(!open);
           }}
-          className={`ui  ${selected.value} label selection dropdown    ${open ? "visible active" : ""}`}
+          className={`ui  ${selected.value} label selection dropdown    ${
+            open ? "visible active" : ""
+          }`}
         >
           <i className="dropdown icon"></i>
           <div className="text">{selected.label} </div>
           <div className={`menu ${open ? "visible transition" : ""}`}>
             {colorList}
+           
           </div>
         </div>
+        <h4 >
+          You selected {selected.value}
+        </h4>
       </div>
     </div>
   );
