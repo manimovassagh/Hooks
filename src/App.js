@@ -37,12 +37,14 @@ const options = [
 export default () => {
   const [selected, setSelected] = useState(options[0]);
   const [showDropDown,setShowDropDown]=useState(true);
+ 
   return (
     <div>
-      <button onClick={()=> setShowDropDown(!showDropDown) }>toggle Dropdown</button>
+      <button   className="ui vk button" onClick={()=> setShowDropDown(!showDropDown) }>toggle Dropdown</button>
       
            {showDropDown ?
             <Dropdown
+           
         selected={selected}
         onSelectedChange={setSelected}
         options={options}
