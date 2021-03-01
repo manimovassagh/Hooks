@@ -6,6 +6,7 @@ import Search from "./components/Search";
 import Dropdown from "./components/Dropdown";
 import Translate from "./components/Translate";
 import Route from "./components/Rout";
+import Header from './components/Header';
 
 const items = [
   {
@@ -73,6 +74,7 @@ export default () => {
 
   return (
     <div>
+      <Header/>
       <Route path="/">
         <Accordion items={items} />
       </Route>
@@ -81,7 +83,7 @@ export default () => {
       </Route>
       <Route path="/dropdown">
         <Dropdown 
-        label="Select a color" 
+        label="See the Real Symantec Ui colors" 
         options={options}
         selected={selected}
         onSelectedChange={setSelected}
