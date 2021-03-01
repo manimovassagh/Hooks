@@ -24,7 +24,7 @@ const options = [
 ];
 
 const Translate = () => {
-  const [language, SetLanguage] = useState(options[0]);
+  const [language, SetLanguage] = useState(options[3]);
   const [text, setText] = useState("");
 
   return (
@@ -43,9 +43,9 @@ const Translate = () => {
       />
       <hr/>
       <h3 className="ui header">
-          output
-      </h3>
       <Convert text={text} language={language} />
+      </h3>
+      
     </div>
   );
 };
