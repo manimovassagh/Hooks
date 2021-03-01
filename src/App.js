@@ -5,6 +5,7 @@ import Accordion from "./components/Accordion";
 import Search from "./components/Search";
 import Dropdown from "./components/Dropdown";
 import Translate from "./components/Translate";
+import Route from './components/Rout';
 
 const items = [
   {
@@ -61,22 +62,20 @@ const showDropdown = () => {
   }
 };
 
-const showTranslate=()=>{
+const showTranslate = () => {
   if (window.location.pathname === "/translate") {
     return <Translate />;
   }
-
-}
+};
 
 export default () => {
   const [selected, setSelected] = useState(options[0]);
 
   return (
     <div>
-      {showAccordion()}
-      {showList()}
-      {showDropdown()}
-      {showTranslate()}
+     <Route path="/" >
+       <Accordion items={items} />
+       </ Route>
     </div>
   );
 };
