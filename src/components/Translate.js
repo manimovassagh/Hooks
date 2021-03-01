@@ -6,8 +6,8 @@ import Convert from './Convert';
 
 const options = [
   {
-    label: "Afrikaans",
-    value: "af",
+    label: "German",
+    value: "de",
   },
   {
     label: "Arabic",
