@@ -76,6 +76,16 @@ export default () => {
      <Route path="/" >
        <Accordion items={items} />
        </ Route>
+     <Route path="/list" >
+       <Search />
+       </ Route>
+     <Route path="/dropdown" >
+       <Dropdown />
+       </ Route>
+     <Route path="/translate" >
+       <Translate />
+       </ Route>
+
     </div>
   );
 };
